@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<player id="0002" lastname="bryant" firstname="kobe" player_id="0002_bryant_kobe">
+    <shapes>
+        <shape borrowed="true" scan="c_brow_raise" path="0000_generic_male\_faceBuild\blenShapes_scans\c_brow_raise.obj"/>
+        <shape borrowed="false" scan="c_eye_blink" path="0002_bryant_kobe\_faceBuild\blenShapes_scans\c_eye_blink.obj"/>
+        <shape borrowed="false" scan="c_face_neutral" path="0002_bryant_kobe\_faceBuild\blenShapes_scans\c_face_neutral.obj"/>
+        <shape borrowed="true" scan="c_jaw_open" path="0000_generic_male\_faceBuild\blenShapes_scans\c_jaw_open.obj"/>
+        <shape borrowed="false" scan="c_lips_part" path="0002_bryant_kobe\_faceBuild\blenShapes_scans\c_lips_part.obj"/>
+        <shape borrowed="false" scan="c_lips_press" path="0002_bryant_kobe\_faceBuild\blenShapes_scans\c_lips_press.obj"/>
+    </shapes>
+    <textures>
+        <texture borrowed="false" map="color" path="0002_bryant_kobe\textures\0002_face_color.tga"/>
+        <texture borrowed="false" map="detailNormal" path="0002_bryant_kobe\textures\0002_face_detailNormal.tga"/>
+        <texture borrowed="false" map="normal" path="0002_bryant_kobe\textures\0002_face_normal.tga"/>
+        <texture borrowed="false" map="occlusion" path="0002_bryant_kobe\textures\0002_face_occlusion.tga"/>
+        <texture borrowed="true" map="wrinkleColor" path="0000_generic_male\textures\0000_face_wrinkleColor.tga"/>
+        <texture borrowed="true" map="wrinkleNormal" path="0000_generic_male\textures\0000_face_wrinkleNormal.tga"/>
+    </textures>
+</player>
