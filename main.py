@@ -3,8 +3,11 @@ import os
 import shutil
 from shutil import copytree, ignore_patterns
 import errno
+from xml.dom import minidom
+
 
 ### Classes ###
+
 
 class player:
 	'''Player class that holds locations and attributes for the player files'''
@@ -22,10 +25,23 @@ class player:
 	
 	def write_xml():
 		dir = player.__str__
-		#write xml(dir)
+		root = minidom.Document()
+
+		xml = root.createElement('player')
+		root.appendChild(xml)
+		xml.setAttribute('id', player.id)
+		xml.setAttribute('lastname', player.lastname)
+		xml.setAttribute('firstname', player.firstname)
+		xml.setAttribute('player_id', player.player_id)
+
+		xml_str = root.toprettyxml(indent = "\t")
+		save_path_file = "player.sidecar"
+		with open(save_path_file, "w") as f:
+			f.write(xml_str)
+	
 
 
-
+player.write_xml()
 
 
 
