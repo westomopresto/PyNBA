@@ -113,3 +113,6 @@ def initialize_players():
 					initalize_folder_structure(id,lastname,firstname) #copies the stuff over we need
 	
 initialize_players()
+
+
+
