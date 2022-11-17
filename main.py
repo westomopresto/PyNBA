@@ -4,6 +4,31 @@ import shutil
 from shutil import copytree, ignore_patterns
 import errno
 
+### Classes ###
+
+class player:
+	'''Player class that holds locations and attributes for the player files'''
+	objs = [] # Paths to ALL unique blendshape OBJs the player might need
+	unique_objs = [] # paths to override objs only
+	shared_objs = [] # paths to generic objs we didnt override
+	textures = [] # paths to ALL unique .tga files the player might need, excluding psd & 4096
+	id = 0000
+	firstname = "john"
+	lastname = "doe"
+	player_id = "0000_doe_john"
+
+	def __str__():
+		return os.path.join("./Players/",player.player_id)
+	
+	def write_xml():
+		dir = player.__str__
+		#write xml(dir)
+
+
+
+
+
+
 ### FUNCTIONS WE NEED ###
 
 def create_folder(dir, folder): # function to make a folder with a parent folder in mind
