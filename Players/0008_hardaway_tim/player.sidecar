@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<player id="0420_" lastname="mitchell_" firstname="weston" player_id="0420_mitchell_weston">
+<player id="0008_" lastname="hardaway_" firstname="tim" player_id="0008_hardaway_tim">
 	<shapes/>
 	<textures>
 		<texture borrowed="" map="color.tga" path="0004_kerr_steve\textures\0000_face_color.tga"/>
@@ -42,29 +42,5 @@
 		<texture borrowed="" map="detailNormal.tga" path="0008_hardaway_tim\textures\_textures_x4096\0000_face_detailNormal.tga"/>
 		<texture borrowed="" map="normal.tga" path="0008_hardaway_tim\textures\_textures_x4096\0000_face_normal.tga"/>
 		<texture borrowed="" map="occlusion.tga" path="0008_hardaway_tim\textures\_textures_x4096\0000_face_occlusion.tga"/>
-		<texture borrowed="" map="color.tga" path="0090_kidd_jason\textures\0000_face_color.tga"/>
-		<texture borrowed="" map="detailNormal.tga" path="0090_kidd_jason\textures\0000_face_detailNormal.tga"/>
-		<texture borrowed="" map="normal.tga" path="0090_kidd_jason\textures\0000_face_normal.tga"/>
-		<texture borrowed="" map="occlusion.tga" path="0090_kidd_jason\textures\0000_face_occlusion.tga"/>
-		<texture borrowed="" map="color.tga" path="0090_kidd_jason\textures\_textures_x4096\0000_face_color.tga"/>
-		<texture borrowed="" map="detailNormal.tga" path="0090_kidd_jason\textures\_textures_x4096\0000_face_detailNormal.tga"/>
-		<texture borrowed="" map="normal.tga" path="0090_kidd_jason\textures\_textures_x4096\0000_face_normal.tga"/>
-		<texture borrowed="" map="occlusion.tga" path="0090_kidd_jason\textures\_textures_x4096\0000_face_occlusion.tga"/>
-		<texture borrowed="" map="color.tga" path="1111_james_lebron\textures\0000_face_color.tga"/>
-		<texture borrowed="" map="detailNormal.tga" path="1111_james_lebron\textures\0000_face_detailNormal.tga"/>
-		<texture borrowed="" map="normal.tga" path="1111_james_lebron\textures\0000_face_normal.tga"/>
-		<texture borrowed="" map="occlusion.tga" path="1111_james_lebron\textures\0000_face_occlusion.tga"/>
-		<texture borrowed="" map="color.tga" path="1111_james_lebron\textures\_textures_x4096\0000_face_color.tga"/>
-		<texture borrowed="" map="detailNormal.tga" path="1111_james_lebron\textures\_textures_x4096\0000_face_detailNormal.tga"/>
-		<texture borrowed="" map="normal.tga" path="1111_james_lebron\textures\_textures_x4096\0000_face_normal.tga"/>
-		<texture borrowed="" map="occlusion.tga" path="1111_james_lebron\textures\_textures_x4096\0000_face_occlusion.tga"/>
-		<texture borrowed="" map="color.tga" path="0420_mitchell_weston\textures\0000_face_color.tga"/>
-		<texture borrowed="" map="detailNormal.tga" path="0420_mitchell_weston\textures\0000_face_detailNormal.tga"/>
-		<texture borrowed="" map="normal.tga" path="0420_mitchell_weston\textures\0000_face_normal.tga"/>
-		<texture borrowed="" map="occlusion.tga" path="0420_mitchell_weston\textures\0000_face_occlusion.tga"/>
-		<texture borrowed="" map="color.tga" path="0420_mitchell_weston\textures\_textures_x4096\0000_face_color.tga"/>
-		<texture borrowed="" map="detailNormal.tga" path="0420_mitchell_weston\textures\_textures_x4096\0000_face_detailNormal.tga"/>
-		<texture borrowed="" map="normal.tga" path="0420_mitchell_weston\textures\_textures_x4096\0000_face_normal.tga"/>
-		<texture borrowed="" map="occlusion.tga" path="0420_mitchell_weston\textures\_textures_x4096\0000_face_occlusion.tga"/>
 	</textures>
 </player>

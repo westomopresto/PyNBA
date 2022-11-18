@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<player id="0006_" lastname="allen_" firstname="ray" player_id="0006_allen_ray">
+	<shapes/>
+	<textures>
+		<texture borrowed="" map="color.tga" path="0004_kerr_steve\textures\0000_face_color.tga"/>
+		<texture borrowed="" map="detailNormal.tga" path="0004_kerr_steve\textures\0000_face_detailNormal.tga"/>
+		<texture borrowed="" map="normal.tga" path="0004_kerr_steve\textures\0000_face_normal.tga"/>
+		<texture borrowed="" map="occlusion.tga" path="0004_kerr_steve\textures\0000_face_occlusion.tga"/>
+		<texture borrowed="" map="color.tga" path="0004_kerr_steve\textures\_textures_x4096\0000_face_color.tga"/>
+		<texture borrowed="" map="detailNormal.tga" path="0004_kerr_steve\textures\_textures_x4096\0000_face_detailNormal.tga"/>
+		<texture borrowed="" map="normal.tga" path="0004_kerr_steve\textures\_textures_x4096\0000_face_normal.tga"/>
+		<texture borrowed="" map="occlusion.tga" path="0004_kerr_steve\textures\_textures_x4096\0000_face_occlusion.tga"/>
+		<texture borrowed="" map="color.tga" path="0005_curry_stephen\textures\0000_face_color.tga"/>
+		<texture borrowed="" map="detailNormal.tga" path="0005_curry_stephen\textures\0000_face_detailNormal.tga"/>
+		<texture borrowed="" map="normal.tga" path="0005_curry_stephen\textures\0000_face_normal.tga"/>
+		<texture borrowed="" map="occlusion.tga" path="0005_curry_stephen\textures\0000_face_occlusion.tga"/>
+		<texture borrowed="" map="color.tga" path="0005_curry_stephen\textures\_textures_x4096\0000_face_color.tga"/>
+		<texture borrowed="" map="detailNormal.tga" path="0005_curry_stephen\textures\_textures_x4096\0000_face_detailNormal.tga"/>
+		<texture borrowed="" map="normal.tga" path="0005_curry_stephen\textures\_textures_x4096\0000_face_normal.tga"/>
+		<texture borrowed="" map="occlusion.tga" path="0005_curry_stephen\textures\_textures_x4096\0000_face_occlusion.tga"/>
+		<texture borrowed="" map="color.tga" path="0006_allen_ray\textures\0000_face_color.tga"/>
+		<texture borrowed="" map="detailNormal.tga" path="0006_allen_ray\textures\0000_face_detailNormal.tga"/>
+		<texture borrowed="" map="normal.tga" path="0006_allen_ray\textures\0000_face_normal.tga"/>
+		<texture borrowed="" map="occlusion.tga" path="0006_allen_ray\textures\0000_face_occlusion.tga"/>
+		<texture borrowed="" map="color.tga" path="0006_allen_ray\textures\_textures_x4096\0000_face_color.tga"/>
+		<texture borrowed="" map="detailNormal.tga" path="0006_allen_ray\textures\_textures_x4096\0000_face_detailNormal.tga"/>
+		<texture borrowed="" map="normal.tga" path="0006_allen_ray\textures\_textures_x4096\0000_face_normal.tga"/>
+		<texture borrowed="" map="occlusion.tga" path="0006_allen_ray\textures\_textures_x4096\0000_face_occlusion.tga"/>
+	</textures>
+</player>

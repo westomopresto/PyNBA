@@ -4,6 +4,7 @@ import shutil
 from shutil import copytree, ignore_patterns
 import errno
 from xml.dom import minidom
+import pathlib
 
 
 ### Classes ###
@@ -12,11 +13,19 @@ class shape:
 	borrowed = False
 	scan = ''
 	path = ''
+	def __init__(self, borrowed, scan, path):
+		self.borrowed = borrowed
+		self.scan = scan
+		self.path = path
 
 class texture:
 	borrowed = False
 	map = ''
 	path = ''
+	def __init__(self, borrowed, map, path):
+		self.borrowed = borrowed
+		self.map = map
+		self.path = path
 
 class player:
 	'''Player class that holds locations and attributes for the player files'''
@@ -168,23 +177,45 @@ def initalize_folder_structure(id, lastname, firstname, _player):
 		except OSError as err:
 			if err.errno == errno.ENOTDIR:
 				shutil.copy2(src, tarPath)
-			else:
-				print("Error: % s" % err)
+			#else:
+				#print("Error: % s" % err)
 
-	print(_player.write_xml())
+		# print(tarPath)
+		# for f in pathlib.Path(tarPath).rglob("*obj"): ## for all the model files
+		# 	print(f)
+		# 	_player.textures.append(f) ## appends to the textures paths array
+		# 	sl = str(f).replace("Players\\", "") ## scan location
+		# 	st = str(f)[6+str(f).find("_scans"):] #scan type
+		# 	st.replace('.tga', "")
+		# 	_player._shapes.append(shape(False, st, sl))		
+
+		for f in pathlib.Path(tarPath).rglob("*tga"): ## for all the textures
+			print(f)
+			_player.textures.append(f) ## appends to the textures paths array
+			df = str(f).replace("Players\\", "")
+			tt = str(f)[5+str(f).find("face_"):]
+			tt.replace('.tga', "")
+			_player._textures.append(texture(False, tt, df))
+
+		
+		#print(tarPath)
+		_player.write_xml()
 
 def initialize_players():
 	with open(newPlayers, newline='') as csvfile:
 		reader = csv.DictReader(csvfile)
 		for row in reader:
 			id = row['id']+"_" #bare minimum underscore shoved in here
+			zeros = 5 - len(id) ## fix 1 number long length player number
+			for x in range(zeros):
+				id = "0"+id
 			lastname = row['lastname']
 			firstname = row['firstname']
 			
 			if(id != "" and firstname != ""): #Checks if the ID & First name are valid, the only two we need to build a directory (at Minimum)
 				if(lastname != ""):
 					lastname = lastname+"_" #if the last name exists, shove in an extra underscore, otherwise its empty anyways
-				if(firstname == "weston"): ## for testing
+				##if(firstname == "weston"): ## for testing
 					_player = player(id, firstname, lastname, id+lastname+firstname) ## initializes our player object
 					initalize_folder_structure(id,lastname,firstname, _player) #copies the stuff over we need
 	
