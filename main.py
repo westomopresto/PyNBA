@@ -8,6 +8,15 @@ from xml.dom import minidom
 
 ### Classes ###
 
+class shape:
+	borrowed = False
+	scan = ''
+	path = ''
+
+class texture:
+	borrowed = False
+	map = ''
+	path = ''
 
 class player:
 	'''Player class that holds locations and attributes for the player files'''
@@ -19,31 +28,56 @@ class player:
 	firstname = "john"
 	lastname = "doe"
 	player_id = "0000_doe_john"
+	_textures = []
+	_shapes = []
 
-	def __str__():
-		return os.path.join("./Players/",player.player_id)
+	def __init__(self, id, firstname, lastname, player_id):
+		self.id = id
+		self.firstname = firstname
+		self.lastname = lastname
+		self.player_id = player_id
+
+	def __str__(self):
+		return os.path.join("./Players/",self.player_id)
 	
-	def write_xml():
-		dir = player.__str__
+	def write_xml(self):
 		root = minidom.Document()
 
 		xml = root.createElement('player')
 		root.appendChild(xml)
-		xml.setAttribute('id', player.id)
-		xml.setAttribute('lastname', player.lastname)
-		xml.setAttribute('firstname', player.firstname)
-		xml.setAttribute('player_id', player.player_id)
+		xml.setAttribute('id', self.id)
+		xml.setAttribute('lastname', self.lastname)
+		xml.setAttribute('firstname', self.firstname)
+		xml.setAttribute('player_id', self.player_id)
+		## shapes cateory
+		shapes = root.createElement('shapes')
+		xml.appendChild(shapes)
+		### shape iterate over our array
+		for _shape in self._shapes:
+			shape = root.createElement('shape')
+			shapes.appendChild(shape)
+			shape.setAttribute('borrowed', _shape.borrowed)
+			shape.setAttribute('scan', _shape.scan)
+			shape.setAttribute('path', _shape.path)
+
+		## textures category	
+		textures = root.createElement('textures')
+		xml.appendChild(textures)
+		### textures iterate over our array
+		for _texture in self._textures:
+			texture = root.createElement('texture')
+			textures.appendChild(texture)
+			texture.setAttribute('borrowed', _texture.borrowed)
+			texture.setAttribute('map', _texture.map)
+			texture.setAttribute('path', _texture.path)
 
 		xml_str = root.toprettyxml(indent = "\t")
-		save_path_file = "player.sidecar"
+		path = self.__str__()+"/"
+		save_path_file = os.path.join(path, "player.sidecar")
 		with open(save_path_file, "w") as f:
 			f.write(xml_str)
+		return path
 	
-
-
-player.write_xml()
-
-
 
 ### FUNCTIONS WE NEED ###
 
@@ -112,7 +146,7 @@ exclude.append("0000_face_wrinkleColor.tga")
 
 ### OUR SPECIFIC NBA PLAYER SCRIPTING ###
 
-def initalize_folder_structure(id,lastname,firstname):
+def initalize_folder_structure(id, lastname, firstname, _player):
 	userFolderName = id+lastname+firstname
 	topFolder = create_folder(playerDirectory, ""+userFolderName) #make the top folder "0420_mitchell_weston" for example, returns path
 	src_path = os.path.join(playerDirectory,genericMaleBlendShape)
@@ -137,7 +171,7 @@ def initalize_folder_structure(id,lastname,firstname):
 			else:
 				print("Error: % s" % err)
 
-	
+	print(_player.write_xml())
 
 def initialize_players():
 	with open(newPlayers, newline='') as csvfile:
@@ -150,8 +184,9 @@ def initialize_players():
 			if(id != "" and firstname != ""): #Checks if the ID & First name are valid, the only two we need to build a directory (at Minimum)
 				if(lastname != ""):
 					lastname = lastname+"_" #if the last name exists, shove in an extra underscore, otherwise its empty anyways
-				if(firstname == "weston"):
-					initalize_folder_structure(id,lastname,firstname) #copies the stuff over we need
+				if(firstname == "weston"): ## for testing
+					_player = player(id, firstname, lastname, id+lastname+firstname) ## initializes our player object
+					initalize_folder_structure(id,lastname,firstname, _player) #copies the stuff over we need
 	
 initialize_players()
 
